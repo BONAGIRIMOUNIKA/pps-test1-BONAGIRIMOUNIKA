@@ -14,8 +14,26 @@ Find the GDB manual and other documentation resources online at:
 For help, type "help".
 Type "apropos word" to search for commands related to "word"...
 Reading symbols from a.out...done.
+(gdb) b main
+Breakpoint 1 at 0x7cd: file p6original.c, line 26.
 (gdb) r
-Starting program: /home/runner/pps-test1-BONAGIRIMOUNIKA-4/a.out 
+Starting program: /home/runner/pps-test1-BONAGIRIMOUNIKA-7/a.out 
 warning: Error disabling address space randomization: Operation not permitted
-enter the n value5
-sum is 15[Inferior 1 (process 409) exited normally]
+
+Breakpoint 1, main () at p6original.c:26
+26    n=input();
+(gdb) n
+enter the n value4
+27    sum=add(n);
+(gdb) n
+28    output(sum);
+(gdb) n
+29    return 0;
+(gdb) n
+30  }(gdb) n
+__libc_start_main (main=0x561ab88007c5 <main>, argc=1, argv=0x7ffcc9e91238, 
+    init=<optimized out>, fini=<optimized out>, rtld_fini=<optimized out>, 
+    stack_end=0x7ffcc9e91228) at ../csu/libc-start.c:344
+344 ../csu/libc-start.c: No such file or directory.
+(gdb) n
+sum is 10[Inferior 1 (process 550) exited normally]
