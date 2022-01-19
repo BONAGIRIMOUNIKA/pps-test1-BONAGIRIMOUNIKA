@@ -14,9 +14,20 @@ Find the GDB manual and other documentation resources online at:
 For help, type "help".
 Type "apropos word" to search for commands related to "word"...
 Reading symbols from a.out...done.
+(gdb) b main
+Breakpoint 1 at 0x63e: file p0final.c, line 4.
 (gdb) r
-Starting program: /home/runner/pps-test1-BONAGIRIMOUNIKA-4/a.out 
+Starting program: /home/runner/pps-test1-BONAGIRIMOUNIKA-7/a.out 
 warning: Error disabling address space randomization: Operation not permitted
+
+Breakpoint 1, main () at p0final.c:4
+4   printf("hello world\n");
+(gdb) n
 hello world
+5   printf("mounika\n");
+(gdb) n
 mounika
-[Inferior 1 (process 948) exited normally]
+7   return 0;
+(gdb) c
+Continuing.
+[Inferior 1 (process 654) exited normally]
