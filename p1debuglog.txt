@@ -14,9 +14,26 @@ Find the GDB manual and other documentation resources online at:
 For help, type "help".
 Type "apropos word" to search for commands related to "word"...
 Reading symbols from a.out...done.
+(gdb) b main
+Breakpoint 1 at 0x722: file p1original.c, line 3.
 (gdb) r
-Starting program: /home/runner/pps-test1-BONAGIRIMOUNIKA-4/a.out 
+Starting program: /home/runner/pps-test1-BONAGIRIMOUNIKA-7/a.out 
 warning: Error disabling address space randomization: Operation not permitted
-enter 2 numbers:7
-8
-sum of a&b is 15[Inferior 1 (process 773) exited normally]
+
+Breakpoint 1, main () at p1original.c:3
+3   {
+(gdb) n
+5     printf("enter 2 numbers:");
+(gdb) n
+6       scanf("%d %d",&a,&b);
+(gdb) n
+enter 2 numbers:6
+7
+7     c=a+b;
+(gdb) n
+8     printf("sum of a&b is %d",c);
+(gdb) n
+9     return 0;
+(gdb) c
+Continuing.
+sum of a&b is 13[Inferior 1 (process 749) exited normally]
