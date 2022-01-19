@@ -14,9 +14,24 @@ Find the GDB manual and other documentation resources online at:
 For help, type "help".
 Type "apropos word" to search for commands related to "word"...
 Reading symbols from a.out...done.
+(gdb) b main
+Breakpoint 1 at 0x7b9: file p2original.c, line 22.
 (gdb) r
-Starting program: /home/runner/pps-test1-BONAGIRIMOUNIKA-4/a.out 
+Starting program: /home/runner/pps-test1-BONAGIRIMOUNIKA-7/a.out 
 warning: Error disabling address space randomization: Operation not permitted
-enter the numbers7
+
+Breakpoint 1, main () at p2original.c:22
+22    a=input();
+(gdb) n
 enter the numbers6
-sum of numbers is 13[Inferior 1 (process 706) exited normally]
+23    b=input();
+(gdb) n
+enter the numbers8
+24    sum=add(a,b);
+(gdb) n
+25    output(sum);
+(gdb) n
+26    return 0;
+(gdb) c
+Continuing.
+sum of numbers is 14[Inferior 1 (process 811) exited normally]
