@@ -1,32 +1,32 @@
 #include<stdio.h>
-int cmp(int a,int b,int c,int largest)
-{
-  largest=0;
-  if(a>b && a>c)
-        largest=a;
-  else if(b>c)
-        largest=b;
-  else
-        largest=c;
-}
-int input()
+int input ()
 {
   int a;
-  printf("enter the number:");
-  scanf("%d", &a);
+  printf("enter the number");
+  scanf("%d",&a);
   return a;
 }
-void output(int l)
+int comp(int a,int b, int c)
 {
-  printf("largest number is:%d\n",l);
+  if ((a>b)&&(a>c))
+  return a;
+  else if ((b>a)&&(b>c))
+  return b;
+  else
+  return c;
+
 }
-int main()
+int output(int biggest)
 {
-  int x,y,z,l;
+  printf("biggest number is %d",biggest);
+}
+int main ()
+{
+  int x,y,z,biggest;
   x=input();
   y=input();
   z=input();
-  cmp(x,y,z,l);
-  output(l);
+  biggest=comp(x,y,z);
+  output(biggest);
   return 0;
 }
