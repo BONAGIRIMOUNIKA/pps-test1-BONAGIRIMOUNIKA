@@ -1,27 +1,32 @@
-include<stdio.h>
-int input(int*a,int*b,int*c)
+#include <stdio.h>
+int cmp(int a, int b, int c)
 {
-  printf("enter the 3 values");
-  scanf("%d%d%d",a,b,c);
+  int largest=0;
+  if(a>b && b>c)
+        largest=a;
+  else if(b>a && b>c)
+        largest=b;
+  else if(c>a && c>b)
+        largest=c;
 }
-int comp(int a,int b,int c,int*big)
+int input()
 {
-  if ((a>b)&&(a>c))
-  *big=a;
-  else if ((b>a)&&(b>c))
-  *big=b;
-  else
-  *big=c;
+  int a;
+  printf("Enter the number:");
+  scanf("%d", &a);
+  return a;
 }
-int output( int big)
+void output(int l)
 {
-  printf("biggest number is %d",big);
+  printf("Largest number is : %d\n", l);
 }
-int main ()
+int main()
 {
-  int x,y,z,big;
-  input (&x,&y,&z);
-  comp(x,y,z,&big);
-  output(big);
+  int x,y,z,l;
+  x= input();
+  y= input();
+  z= input();
+  l= cmp(x,y,z);
+  output(l);
   return 0;
 }
