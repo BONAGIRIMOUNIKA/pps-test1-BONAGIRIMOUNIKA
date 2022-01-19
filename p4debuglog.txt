@@ -14,10 +14,27 @@ Find the GDB manual and other documentation resources online at:
 For help, type "help".
 Type "apropos word" to search for commands related to "word"...
 Reading symbols from a.out...done.
+(gdb) b main
+Breakpoint 1 at 0x7db: file p4original.c, line 26.
 (gdb) r
-Starting program: /home/runner/pps-test1-BONAGIRIMOUNIKA-4/a.out 
+Starting program: /home/runner/pps-test1-BONAGIRIMOUNIKA-7/a.out 
 warning: Error disabling address space randomization: Operation not permitted
+
+Breakpoint 1, main () at p4original.c:26
+26    x=input();
+(gdb) n
 enter the number7
-enter the number8
-enter the number8
-biggest number is 8[Inferior 1 (process 561) exited normally]
+27    y=input();
+(gdb) n
+enter the number6
+28    z=input();
+(gdb) n
+enter the number4
+29    biggest=comp(x,y,z);
+(gdb) n
+30    output(biggest);
+(gdb) n
+31    return 0;
+(gdb) c
+Continuing.
+biggest number is 7[Inferior 1 (process 905) exited normally]
